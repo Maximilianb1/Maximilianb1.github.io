@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f7f6f2" />
+    <meta
+      name="description"
+      content="Research and papers by Maximilian Bershtman on pretrained models, tabular anomaly detection, and 3D vision."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Research - Maximilian Bershtman" />
+    <meta
+      property="og:description"
+      content="Research and papers by Maximilian Bershtman on pretrained models, tabular anomaly detection, and 3D vision."
+    />
+    <title>Research - Maximilian Bershtman</title>
+    <link rel="icon" href="assets/mark.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Maximilian Bershtman",
+        "email": "max.bershtman@gmail.com",
+        "sameAs": [
+          "https://www.linkedin.com/in/maximilian-bershtman/",
+          "https://github.com/Maximilianb1"
+        ],
+        "affiliation": {
+          "@type": "CollegeOrUniversity",
+          "name": "Technion - Israel Institute of Technology"
+        },
+        "knowsAbout": [
+          "Machine learning",
+          "Deep learning",
+          "Data science",
+          "Foundation models",
+          "Anomaly detection"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="shell nav-wrap">
+        <a
+          class="wordmark"
+          href="index.html"
+          aria-label="Maximilian Bershtman, home"
+          ><img src="assets/mark.svg" width="55" height="38" alt="MB"
+        /></a>
+        <button
+          class="menu-toggle"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          type="button"
+        >
+          Menu <span class="menu-icon" aria-hidden="true"><i></i><i></i></span>
+        </button>
+        <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+          <a href="index.html">Home</a
+          ><a href="research.html" aria-current="page">Research</a
+          ><a href="experience.html">Experience</a
+          ><a href="studies.html">Studies</a
+          ><a class="nav-contact" href="#contact"
+            >Contact <span aria-hidden="true">↗</span></a
+          >
+        </nav>
+      </div>
+    </header>
+    <main id="main">
+      <section class="shell page-intro">
+        <p class="eyebrow">Research</p>
+        <h1>What else can<br /><em>a model do?</em></h1>
+        <p>
+          I enjoy discovering capabilities hidden inside different models, then
+          finding creative ways to use them to solve new problems. My work has
+          explored pretrained tabular models, 3D reconstruction, and graph
+          neural networks.
+        </p>
+      </section>
+      <section
+        class="shell content-section"
+        id="zen-focus"
+        aria-labelledby="paper-title"
+      >
+        <div class="section-label">
+          <span>01 / First paper</span
+          ><span>Deep learning / Tabular anomaly detection</span>
+        </div>
+        <article class="paper-card">
+          <div class="paper-status">
+            <span class="status-dot"></span> Manuscript under review at ICLR
+            2027
+          </div>
+          <h2 id="paper-title">
+            Adapting prior-data fitted networks for tabular anomaly detection
+          </h2>
+          <p class="authors">Maximilian Bershtman &amp; Niv Cohen</p>
+          <p class="paper-affiliation">
+            Faculty of Electrical and Computer Engineering<br />Technion -
+            Israel Institute of Technology
+          </p>
+          <p class="large-copy">
+            Can a model pretrained for tabular prediction also learn to detect
+            anomalies?
+          </p>
+          <p>
+            Niv Cohen and I developed ZEN and FOCUS, two methods that achieve
+            state-of-the-art performance in our tabular anomaly detection
+            benchmark evaluation. This paper studies how representations from
+            TabPFN, a deep-learning prior-data fitted network, can be adapted
+            for unsupervised tabular anomaly detection. The task is particularly
+            challenging when the reference set contains the very anomalies the
+            model needs to identify.
+          </p>
+          <div class="paper-actions">
+            <a
+              class="button"
+              href="assets/adapting-prior-data-fitted-networks.pdf"
+              target="_blank"
+              rel="noreferrer"
+              >Read the paper <span aria-hidden="true">↗</span></a
+            ><a
+              class="text-link"
+              href="https://github.com/Maximilianb1/zen-focus-tabular-anomaly-detection"
+              target="_blank"
+              rel="noreferrer"
+              >Code &amp; experiments <span aria-hidden="true">↗</span></a
+            >
+          </div>
+          <div class="benchmark-highlight">
+            <span class="small-label">Results in our paper</span>
+            <p>
+              Across 47 ADBench datasets and five random seeds, both methods
+              outperform all 17 compared baselines in mean AUROC in both clean
+              and contaminated reference-set settings.
+            </p>
+          </div>
+          <div class="method-grid">
+            <div>
+              <span class="small-label">Frozen representations</span>
+              <h3>ZEN</h3>
+              <p>
+                Zero-training Embedding Neighbors uses features from a frozen
+                model and nearest-neighbor distances to score anomalies. Trust
+                weights reduce the influence of unusual reference samples.
+              </p>
+            </div>
+            <div>
+              <span class="small-label">Adapted representations</span>
+              <h3>FOCUS</h3>
+              <p>
+                Fine-tuned One-Class Unsupervised Scoring adapts the model’s
+                representations with an unsupervised compactness objective, then
+                applies the same scoring approach.
+              </p>
+            </div>
+          </div>
+          <p class="paper-note">
+            The public repository includes the methods, benchmark results, and
+            scripts for reproducing the reported tables and statistics.
+          </p>
+        </article>
+      </section>
+      <section
+        class="shell content-section"
+        id="vision"
+        aria-labelledby="vision-title"
+      >
+        <div class="section-label">
+          <span>02 / Research project</span
+          ><span>Computer vision / 3D understanding</span>
+        </div>
+        <div class="detail-layout">
+          <div>
+            <p class="eyebrow">Semantic probing</p>
+            <h2 id="vision-title">
+              Looking inside<br /><em>3D reconstruction.</em>
+            </h2>
+            <p class="attribution">With Yoni Kasten (NVIDIA)</p>
+          </div>
+          <div class="detail-copy">
+            <p class="large-copy">
+              Does a model that reconstructs a scene also learn what the objects
+              in that scene are?
+            </p>
+            <p>
+              I investigated object-level semantics in the frozen latent
+              representations of an iterative 3D reconstruction model. A
+              lightweight probing head tested whether these features could
+              support object segmentation across new viewpoints and unseen
+              object instances.
+            </p>
+            <p>
+              The results indicated that the model learns a 3D-consistent
+              semantic representation, extending what its reconstruction
+              objective explicitly asks it to do.
+            </p>
+            <p class="report-title">
+              <span class="small-label">Technical report</span>Semantic Probing
+              of Iterative 3D Reconstruction Models: Extending Cut3r
+            </p>
+          </div>
+        </div>
+      </section>
+      <section
+        class="shell content-section final-section"
+        aria-labelledby="graphs-title"
+      >
+        <div class="section-label">
+          <span>03 / Earlier research</span
+          ><span>Graph neural networks / Scientific modeling</span>
+        </div>
+        <div class="detail-layout">
+          <h2 id="graphs-title">
+            Learning from<br /><em>molecular graphs.</em>
+          </h2>
+          <div class="detail-copy">
+            <p>
+              I developed graph neural network models to predict micro-level
+              geometric changes in molecular chemistry simulations. This work
+              introduced me to research at the intersection of deep learning and
+              a scientific domain.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer" id="contact">
+      <div class="shell contact-row">
+        <div>
+          <p class="eyebrow">Get in touch</p>
+          <h2>Let’s start a conversation.</h2>
+          <p>
+            A question, an idea, an opportunity, or simply a hello. Whatever
+            brings you here, you’re welcome to reach out.
+          </p>
+        </div>
+        <div class="contact-links">
+          <a href="mailto:max.bershtman@gmail.com"
+            ><span>Email</span><strong>max.bershtman@gmail.com</strong
+            ><span aria-hidden="true">↗</span></a
+          ><a
+            href="https://www.linkedin.com/in/maximilian-bershtman/"
+            target="_blank"
+            rel="noreferrer"
+            ><span>LinkedIn</span><strong>Let’s connect</strong
+            ><span aria-hidden="true">↗</span></a
+          >
+        </div>
+      </div>
+      <div class="shell footer-bottom">
+        <span>Maximilian Bershtman</span><span>Haifa, Israel</span
+        ><span>© <span id="year">2026</span></span>
+      </div>
+    </footer>
+  </body>
+</html>
