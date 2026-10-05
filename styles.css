@@ -1696,13 +1696,16 @@ p {
 }
 @media (max-width: 760px) {
   .home-opening {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100dvh - 65px);
   }
   .hero {
+    flex: 1;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas: "name" "illustration" "intro" "detail" "actions" "shortcuts";
-    align-content: start;
+    align-content: space-evenly;
     gap: 12px;
     padding-block: 20px;
     min-height: 0;
@@ -1762,6 +1765,9 @@ p {
   }
   .interest-inner {
     min-height: 88px;
+  }
+  .home-opening .interest-band {
+    flex-shrink: 0;
   }
 }
 @media (max-width: 760px) and (max-height: 800px) {
