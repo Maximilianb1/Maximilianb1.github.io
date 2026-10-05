@@ -45,4 +45,6 @@ Course disclosures use native HTML `details` and `summary` elements, following [
 
 The site automatically adapts to the browser width and height. There is no manual view selector or saved layout preference. The homepage places the name, introduction, action buttons, neural-network artwork, and Curious about tags together in the opening screen. On large desktop screens, its layout expands to 1,680 pixels with a proportionally larger introduction and illustration, while paragraphs retain readable line lengths. A compact framing of the same SVG network keeps the illustration readable on phones. Smaller phone screens place it beside the name, while taller phones use a larger image below the name.
 
+On phones, the introduction follows its content height with modest padding, rather than stretching to fill the screen. This avoids large empty gaps around the name, illustration, and action buttons.
+
 The site respects reduced-motion settings and supports keyboard navigation. Larger accessibility text settings and unusually short browser windows can require scrolling to preserve readable text.
