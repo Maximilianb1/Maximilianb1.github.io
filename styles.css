@@ -1605,6 +1605,59 @@ p {
 .hero-shortcuts a {
   min-height: 36px;
 }
+/* Give the homepage room to grow on wide screens, with readable text columns. */
+@media (min-width: 1224px) {
+  .home-page .shell {
+    width: min(1680px, calc(100% - clamp(64px, 16vw - 128px, 240px)));
+  }
+  .home-page .hero {
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(66px, 6vw, 120px);
+  }
+  .home-page .hero-art {
+    width: fit-content;
+    justify-self: center;
+  }
+  .home-page .hero-art img {
+    height: min(660px, calc(100svh - 240px));
+    max-height: none;
+  }
+  .home-page .section-intro {
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(66px, 6vw, 120px);
+  }
+  .home-page .section-intro > p {
+    max-width: 440px;
+    justify-self: start;
+  }
+  .home-page .journey-layout {
+    grid-template-columns: clamp(180px, 15vw, 270px) 1fr;
+    gap: clamp(64px, 5vw, 100px);
+  }
+  .home-page .milestone > p {
+    max-width: 760px;
+  }
+}
+@media (min-width: 1440px) and (min-height: 741px) {
+  .home-page .hero h1 {
+    font-size: clamp(5.2rem, 5.4vw, 6.6rem);
+  }
+  .home-page .hero-intro {
+    max-width: 560px;
+    font-size: 1.25rem;
+  }
+  .home-page .hero-detail {
+    max-width: 540px;
+    font-size: 0.95rem;
+  }
+  .home-page .milestone h3 {
+    font-size: 2.35rem;
+  }
+  .home-page .milestone > p {
+    max-width: 820px;
+    font-size: 1rem;
+  }
+}
 @media (max-width: 760px) {
   html:not(.js) .nav-wrap {
     flex-wrap: wrap;
